@@ -1,0 +1,40 @@
+{
+  "variantName": "carousel-hero",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-06-05T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://thedropcollective.ca/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "hero-carousel",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "background-image + heading + paragraph + optional CTA per slide",
+    "buttonCount": 1,
+    "imageCount": 3,
+    "slideCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero sections with multiple rotating slides",
+      "brand landing pages with full-width image carousels",
+      "campaign pages with rotating messaging"
+    ],
+    "notSuitableFor": [
+      "product image galleries without text overlay",
+      "testimonial carousels (use cards variant instead)",
+      "small inline carousels within content sections"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-05T00:00:00.000Z"
+  }
+}

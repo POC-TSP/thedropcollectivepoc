@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-product",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-06-05T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://thedropcollective.ca/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "heading + paragraph + CTA | product image",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "featured product sections with text and image side-by-side",
+      "product highlight areas on landing pages",
+      "promotional sections with description and product photo"
+    ],
+    "notSuitableFor": [
+      "multi-column text-only layouts",
+      "comparison tables or feature grids",
+      "image galleries without text"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-05T00:00:00.000Z"
+  }
+}

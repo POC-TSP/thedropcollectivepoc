@@ -1,0 +1,41 @@
+{
+  "variantName": "cards-blog",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-06-05T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://thedropcollective.ca/",
+    "originPage": "homepage",
+    "blockPosition": "bottom"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "blog-posts",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + excerpt + read-more link per card",
+    "buttonCount": 1,
+    "imageCount": 1,
+    "cardCount": 4
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "blog post listing sections on homepages",
+      "article highlight sections",
+      "news and updates card grids",
+      "content with thumbnail + title + excerpt pattern"
+    ],
+    "notSuitableFor": [
+      "product cards with pricing",
+      "team member cards",
+      "feature cards with icons instead of photos"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/"],
+    "reuseCount": 1,
+    "lastUsed": "2026-06-05T00:00:00.000Z"
+  }
+}

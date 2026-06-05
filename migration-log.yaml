@@ -1,0 +1,188 @@
+migration:
+  source: https://thedropcollective.ca/
+  target: AEM Edge Delivery Services (Universal Editor / xwalk)
+  date: 2026-06-05
+  status: complete
+
+site_overview:
+  name: The Drop Collective
+  description: Whisky/spirits enthusiast community by Corby Spirit & Wine Ltd.
+  platform: WordPress (Foundation CSS framework)
+  locale: en (single language)
+  total_urls_discovered: 51
+  total_pages_analyzed: 48
+  pages_failed_analysis: 3
+  pages_imported: 48 (47 success, 1 partial)
+
+url_discovery:
+  method: sitemap
+  sitemap_url: /sitemaps.xml
+  raw_urls: 93
+  filtered_valid_page_urls: 51
+  filtering_notes: Removed 42 CDATA-wrapped image URLs from sitemap XML
+
+failed_pages:
+  - url: https://thedropcollective.ca/contests/sot/
+    reason: HTTP 404 - page no longer exists
+  - url: https://thedropcollective.ca/redbreast-at-tiff/thank-you/
+    reason: ERR_TOO_MANY_REDIRECTS - infinite redirect loop
+  - url: https://thedropcollective.ca/rabbit-hole-kentucky-contest/thank-you/
+    reason: ERR_TOO_MANY_REDIRECTS - infinite redirect loop
+
+templates:
+  total: 17
+  templates:
+    - name: category-landing
+      pages: 8
+      description: Homepage and category pages with carousels, columns, and cards
+    - name: blog-article-short
+      pages: 10
+      description: Short blog articles - all default content (no blocks)
+    - name: blog-article-long
+      pages: 6
+      description: Long-form blog articles - all default content
+    - name: content-landing
+      pages: 4
+      description: Contest/promo landing pages
+    - name: legal-text
+      pages: 3
+      description: Privacy policy, terms, rules pages
+    - name: survey-page
+      pages: 3
+      description: Member survey with open/closed/coming-soon states
+    - name: contest-campaign
+      pages: 3
+      description: Contest campaigns with status states
+    - name: thank-you-page
+      pages: 2
+      description: Form submission confirmation pages
+    - name: about-page
+      pages: 1
+      description: About the brand
+    - name: blog-listing
+      pages: 1
+      description: Blog index
+    - name: blog-article-product
+      pages: 1
+      description: Product review article
+    - name: contest-entry
+      pages: 1
+      description: Contest entry with form
+    - name: contest-single
+      pages: 1
+      description: Single contest page
+    - name: thank-you-minimal
+      pages: 1
+      description: Minimal confirmation page
+    - name: promo-thank-you
+      pages: 1
+      description: Promo offer confirmation
+    - name: invitation-thank-you
+      pages: 1
+      description: Invitation acceptance confirmation
+    - name: signup-page
+      pages: 1
+      description: User registration
+
+blocks:
+  total_variants: 33
+  eds_mapped: 22
+  custom_unknown: 11
+  blocks_used:
+    - name: carousel
+      eds_base: carousel
+      source_selector: ".orbit"
+      notes: Foundation Orbit carousel with orbit-slide items
+    - name: cards
+      eds_base: cards
+      source_selector: ".card"
+      notes: Blog post cards with card-image and card-section
+    - name: columns
+      eds_base: columns
+      source_selector: ".grid-x.align-middle:has(.cell.medium-6)"
+      notes: Foundation Grid two-column layout
+    - name: form
+      eds_base: form
+      source_selector: "form, .wpcf7, .gform_wrapper"
+      notes: WordPress Contact Form 7 and Gravity Forms
+
+design_system:
+  color_scheme: dark
+  primary_background: "#1c2125"
+  text_color: "#ffffff"
+  accent_color: "#ffb690 (copper/gold)"
+  border_color: "#ccd0d6"
+  font_family: "Futura PT, sans-serif"
+  heading_style: uppercase with letter-spacing
+  button_style: rectangular (no border-radius), bordered, uppercase
+
+navigation:
+  type: simple horizontal menu
+  items:
+    - About
+    - Whiskies
+    - Tequilas
+    - Mezcal
+    - Blog
+    - Sign Up
+  mobile: off-canvas slide-out menu
+  logo: Drop Collective white logo
+
+footer:
+  sections:
+    - Logo + newsletter signup CTA
+    - Multi-column category navigation with sub-items
+    - Copyright, legal links, social media (Instagram, Facebook)
+  notes: Includes age gate compliance language
+
+import_infrastructure:
+  parsers:
+    - carousel.js (Foundation Orbit slides)
+    - cards.js (blog post cards)
+    - columns.js (two-column grid layout)
+    - form.js (WordPress forms)
+  transformers:
+    - thedropcollective-cleanup.js (removes header, footer, nav, modals, consent)
+  import_script: import-thedropcollective.js
+  bundle: import-thedropcollective.bundle.js
+
+content_import:
+  total_processed: 48
+  successful: 47
+  failed: 1
+  failure_notes: Homepage failed with bundling error (cwd function) but content/index.plain.html was still generated
+  output_directory: content/
+  report: tools/importer/reports/import-thedropcollective.report.xlsx
+
+assets:
+  images: Referenced via original WordPress URLs (thedropcollective.ca/wp-content/uploads/)
+  dam_migration: Images will need to be uploaded to AEM DAM and references updated
+  no_dm_scene7: true (all images are standard WordPress uploads)
+
+technical_decisions:
+  - decision: Single import script for all 17 templates
+    reason: Most templates share the same block set; URL-based template matching handles variations
+  - decision: Blog articles treated as all default content
+    reason: No blocks needed - text, headings, images, and blockquotes only
+  - decision: Age verification modal dismissed via cleanup transformer
+    reason: Not authorable content; handled client-side
+  - decision: Futura PT font loaded from system/Adobe Fonts
+    reason: Not available as self-hosted web font; needs Typekit integration in production
+  - decision: Dark theme applied globally
+    reason: Original site is dark-themed throughout
+
+known_limitations:
+  - "Most Read" section on blog articles loads dynamically - needs fragment or auto-block implementation
+  - Forms imported as structural description only - need AEM Forms integration
+  - Adobe Fonts (Typekit) integration needed for Futura PT in production
+  - Image DAM migration not yet performed (URLs still reference source site)
+  - Age gate implementation needed as client-side component (not part of content)
+
+next_steps:
+  - Upload images to AEM DAM and update references
+  - Configure Adobe Fonts (Typekit) for Futura PT
+  - Implement age verification as client-side component
+  - Create "Most Read" fragment or auto-block for related posts
+  - Review and refine form blocks with AEM Forms integration
+  - Performance testing and Lighthouse audit
+  - Content author review and UAT

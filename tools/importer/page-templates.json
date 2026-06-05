@@ -1,0 +1,234 @@
+{
+  "templates": [
+    {
+      "name": "category-landing",
+      "description": "Category landing page with carousel sections, product/brand showcases, and CTAs",
+      "urls": [
+        "https://thedropcollective.ca/",
+        "https://thedropcollective.ca/distilleries/",
+        "https://thedropcollective.ca/mezcal/",
+        "https://thedropcollective.ca/tequilas/",
+        "https://thedropcollective.ca/ultra-prestige-limited-edition/",
+        "https://thedropcollective.ca/whiskies/",
+        "https://thedropcollective.ca/redbreast-at-tiff/",
+        "https://thedropcollective.ca/redbreast-at-tiff/coming-soon/"
+      ],
+      "blocks": [
+        {
+          "name": "carousel",
+          "instances": [".orbit"],
+          "description": "Hero carousel and product carousels with background images and CTAs"
+        },
+        {
+          "name": "columns",
+          "instances": [".grid-x.align-middle:has(.cell.medium-6)"],
+          "description": "Side-by-side content with text and product image"
+        },
+        {
+          "name": "cards",
+          "instances": [".card"],
+          "description": "Blog post cards in a grid layout"
+        }
+      ]
+    },
+    {
+      "name": "about-page",
+      "description": "About page with text content, team info, and brand story",
+      "urls": [
+        "https://thedropcollective.ca/about/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "blog-listing",
+      "description": "Blog index page with article listing and category navigation",
+      "urls": [
+        "https://thedropcollective.ca/blog/"
+      ],
+      "blocks": [
+        {
+          "name": "cards",
+          "instances": [".card"],
+          "description": "Blog article cards in listing format"
+        }
+      ]
+    },
+    {
+      "name": "blog-article-short",
+      "description": "Blog article with hero image and text content - all default content",
+      "urls": [
+        "https://thedropcollective.ca/blog/canadian-whisky-needs-champions-like-you/",
+        "https://thedropcollective.ca/blog/lot-no-40-dark-oak/",
+        "https://thedropcollective.ca/blog/lot-no-40-peated-quarter-cask/",
+        "https://thedropcollective.ca/blog/royal-salute-coronation-of-king-charles-iii-edition/",
+        "https://thedropcollective.ca/blog/six-whiskies-for-your-bar-cart/",
+        "https://thedropcollective.ca/blog/tasting-notes-and-where-to-find-them/",
+        "https://thedropcollective.ca/blog/the-occasion-and-the-whisky-gift-guide/",
+        "https://thedropcollective.ca/blog/upcoming-whisky-releases/",
+        "https://thedropcollective.ca/blog/whisky-is-a-journey-for-all-five-senses/",
+        "https://thedropcollective.ca/blog/whisky-the-fundamentals/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "blog-article-long",
+      "description": "Blog article with hero, multiple images, and extended text content",
+      "urls": [
+        "https://thedropcollective.ca/blog/irish-whiskey-five-quick-qs-with-our-man-in-midleton/",
+        "https://thedropcollective.ca/blog/irish-whiskey/",
+        "https://thedropcollective.ca/blog/rabbit-hole-kaveh-zamanian-rabbit-hole/",
+        "https://thedropcollective.ca/blog/the-glenlivet-14-year-old/",
+        "https://thedropcollective.ca/blog/the-hiram-walker-distiller-ontario/",
+        "https://thedropcollective.ca/blog/think-inside-the-barrel/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "blog-article-product",
+      "description": "Blog article focused on product review with detailed imagery",
+      "urls": [
+        "https://thedropcollective.ca/blog/pike-creek-22-year-old-pedro-ximenez-cask/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "content-landing",
+      "description": "Content landing page with promotional sections and feature highlights",
+      "urls": [
+        "https://thedropcollective.ca/contests/",
+        "https://thedropcollective.ca/craft/",
+        "https://thedropcollective.ca/rye-explorations/",
+        "https://thedropcollective.ca/redbreast-at-tiff/closed/"
+      ],
+      "blocks": [
+        {
+          "name": "carousel",
+          "instances": [".orbit"],
+          "description": "Content showcase carousel"
+        },
+        {
+          "name": "cards",
+          "instances": [".card"],
+          "description": "Feature cards grid"
+        }
+      ]
+    },
+    {
+      "name": "contest-entry",
+      "description": "Contest entry page with form and promotional content",
+      "urls": [
+        "https://thedropcollective.ca/contests/mb/"
+      ],
+      "blocks": [
+        {
+          "name": "form",
+          "instances": ["form", ".wpcf7", ".gform_wrapper"],
+          "description": "Contest entry form"
+        }
+      ]
+    },
+    {
+      "name": "thank-you-page",
+      "description": "Thank you confirmation page after form submission",
+      "urls": [
+        "https://thedropcollective.ca/contests/mb/thank-you/",
+        "https://thedropcollective.ca/contests/ot/thank-you/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "contest-single",
+      "description": "Single contest page with details and entry form",
+      "urls": [
+        "https://thedropcollective.ca/contests/ot/"
+      ],
+      "blocks": [
+        {
+          "name": "form",
+          "instances": ["form", ".wpcf7", ".gform_wrapper"],
+          "description": "Contest form"
+        }
+      ]
+    },
+    {
+      "name": "thank-you-minimal",
+      "description": "Minimal thank you page with brief confirmation message",
+      "urls": [
+        "https://thedropcollective.ca/contests/sot/thank-you/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "legal-text",
+      "description": "Legal/policy page with long-form text content",
+      "urls": [
+        "https://thedropcollective.ca/exclusive-masterclass-rules-and-regulations/",
+        "https://thedropcollective.ca/privacy-policy/",
+        "https://thedropcollective.ca/terms-of-use/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "promo-thank-you",
+      "description": "Thank you page for promotional offer submission",
+      "urls": [
+        "https://thedropcollective.ca/introducing-lot-no-40-18-year-old/thank-you/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "invitation-thank-you",
+      "description": "Thank you page for invitation acceptance",
+      "urls": [
+        "https://thedropcollective.ca/invitation-to-try-rabbit-hole/thank-you/"
+      ],
+      "blocks": []
+    },
+    {
+      "name": "survey-page",
+      "description": "Survey/form page with status states",
+      "urls": [
+        "https://thedropcollective.ca/member-survey/",
+        "https://thedropcollective.ca/member-survey/closed/",
+        "https://thedropcollective.ca/member-survey/coming-soon/"
+      ],
+      "blocks": [
+        {
+          "name": "form",
+          "instances": ["form", ".wpcf7", ".gform_wrapper"],
+          "description": "Member survey form"
+        }
+      ]
+    },
+    {
+      "name": "contest-campaign",
+      "description": "Contest campaign page with status states",
+      "urls": [
+        "https://thedropcollective.ca/rabbit-hole-kentucky-contest/",
+        "https://thedropcollective.ca/rabbit-hole-kentucky-contest/closed/",
+        "https://thedropcollective.ca/rabbit-hole-kentucky-contest/coming-soon/"
+      ],
+      "blocks": [
+        {
+          "name": "form",
+          "instances": ["form", ".wpcf7", ".gform_wrapper"],
+          "description": "Contest entry form"
+        }
+      ]
+    },
+    {
+      "name": "signup-page",
+      "description": "User signup/registration page with form",
+      "urls": [
+        "https://thedropcollective.ca/sign-up/"
+      ],
+      "blocks": [
+        {
+          "name": "form",
+          "instances": ["form", ".wpcf7", ".gform_wrapper"],
+          "description": "Signup registration form"
+        }
+      ]
+    }
+  ]
+}
